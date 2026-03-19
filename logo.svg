@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 140">
+  <defs>
+    <!-- Main gradient: cyan to purple -->
+    <linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="50%" stop-color="#7b61ff"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft shadow -->
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="blur" in2="SourceGraphic" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background (transparent) -->
+
+  <!-- ── Abstract circuit / neuron icon ── -->
+  <g transform="translate(42, 70)" filter="url(#glow)">
+    <!-- Central node -->
+    <circle cx="0" cy="0" r="10" fill="url(#mainGrad)" opacity="0.95"/>
+
+    <!-- Branching lines (circuit paths) -->
+    <!-- Top-left -->
+    <line x1="0" y1="-10" x2="-22" y2="-38" stroke="url(#mainGrad)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="-22" cy="-38" r="5" fill="#00d4ff" opacity="0.8"/>
+
+    <!-- Top-right -->
+    <line x1="0" y1="-10" x2="22" y2="-38" stroke="url(#mainGrad)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="22" cy="-38" r="5" fill="#7b61ff" opacity="0.8"/>
+
+    <!-- Bottom-left -->
+    <line x1="0" y1="10" x2="-22" y2="38" stroke="url(#mainGrad)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="-22" cy="38" r="5" fill="#7b61ff" opacity="0.8"/>
+
+    <!-- Bottom-right -->
+    <line x1="0" y1="10" x2="22" y2="38" stroke="url(#mainGrad)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="22" cy="38" r="5" fill="#a855f7" opacity="0.8"/>
+
+    <!-- Left -->
+    <line x1="-10" y1="0" x2="-36" y2="0" stroke="url(#mainGrad)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="-36" cy="0" r="4" fill="#00d4ff" opacity="0.6"/>
+
+    <!-- Right -->
+    <line x1="10" y1="0" x2="36" y2="0" stroke="url(#mainGrad)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="36" cy="0" r="4" fill="#a855f7" opacity="0.6"/>
+
+    <!-- Secondary connections (hexagonal feel) -->
+    <line x1="-22" y1="-38" x2="-36" y2="0" stroke="url(#mainGrad)" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+    <line x1="22" y1="-38" x2="36" y2="0" stroke="url(#mainGrad)" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+    <line x1="-22" y1="38" x2="-36" y2="0" stroke="url(#mainGrad)" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+    <line x1="22" y1="38" x2="36" y2="0" stroke="url(#mainGrad)" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+
+    <!-- Pulse ring (animated feel) -->
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0.25"/>
+    <circle cx="0" cy="0" r="24" fill="none" stroke="#a855f7" stroke-width="0.5" opacity="0.15"/>
+  </g>
+
+  <!-- ── Text: WELAI ── -->
+  <text x="110" y="82" font-family="'SF Pro Display', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        font-size="62" font-weight="800" letter-spacing="-2" fill="url(#mainGrad)">
+    WELAI
+  </text>
+
+  <!-- ── Subtitle: .ORG ── -->
+  <text x="370" y="82" font-family="'SF Pro Display', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        font-size="62" font-weight="800" letter-spacing="-2" fill="#e0e0e8" opacity="0.6">
+    .ORG
+  </text>
+
+  <!-- ── Tagline ── -->
+  <text x="112" y="108" font-family="'SF Pro Text', -apple-system, 'Noto Sans SC', sans-serif"
+        font-size="14" font-weight="400" fill="#8888a0" letter-spacing="4">
+    AI · 机器人 · 前沿科技
+  </text>
+
+  <!-- ── Accent line under text ── -->
+  <rect x="110" y="116" width="180" height="1" rx="0.5" fill="url(#mainGrad)" opacity="0.3"/>
+</svg>

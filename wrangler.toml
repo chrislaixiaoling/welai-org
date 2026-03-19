@@ -1,0 +1,12 @@
+name = "welai-org"
+main = "src/index.ts"
+compatibility_date = "2025-03-01"
+
+route = "welai.org/*"
+
+[[kv_namespaces]]
+binding = "NEWS_KV"
+id = "f2411cb906ae4416b55755d1ded3cf2b"
+
+[triggers]
+crons = ["*/30 * * * *"]
