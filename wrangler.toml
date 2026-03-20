@@ -2,7 +2,7 @@ name = "welai-org"
 main = "src/index.ts"
 compatibility_date = "2025-03-01"
 
-route = "welai.org/*"
+route = "www.welai.org/*"
 
 [[kv_namespaces]]
 binding = "NEWS_KV"
@@ -10,3 +10,7 @@ id = "f2411cb906ae4416b55755d1ded3cf2b"
 
 [triggers]
 crons = ["*/30 * * * *"]
+
+[vars]
+INSTAPAPER_CONSUMER_KEY = "4facd3cf882c41bdadc540a9c9fe522d"
+INSTAPAPER_CONSUMER_SECRET = "6ce15e2d34994cc4ac396d3698e0ae8a"
